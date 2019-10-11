@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./style.css" type="text/css">
+	<title>Pyssla</title>
+	<style id="style"></style>
+</head>
+
+<body>
+	<h1>Dessin : Pyssla</h1>
+
+	<section id="nouvelleCouleur">
+		<ul>
+			<li class="rouge">Rouge<input type="range" id="rouge" name="points" min="0" max="255" onchange="modifR(event)"/></li>
+			<li class="vert">Vert<input type="range" id="vert" name="points" min="0" max="255" onchange="modifV(event)"/></li>
+			<li class="bleu">Bleu<input type="range" id="bleu" name="points" min="0" max="255" onchange="modifB(event)"/></li>
+		</ul>
+		<div id="resultat" style="width: 70px; height: 70px; border: 1px solid black;">
+		</div>
+		<button id="validerCouleur" onclick="validerCouleur()">Ajouter la couleur</button>
+	</section>
+
+	<section id="couleurs">
+		<button class="bleu" onclick="selectionCouleur(this)">Bleu</button>
+		<button class="vert" onclick="selectionCouleur(this)">Vert</button>
+		<button class="jaune" onclick="selectionCouleur(this)">Jaune</button>
+		<button class="orange" onclick="selectionCouleur(this)">Orange</button>
+		<button class="rose" onclick="selectionCouleur(this)">Rose</button>
+		<button class="rouge" onclick="selectionCouleur(this)">Rouge</button>
+		<button class="violet" onclick="selectionCouleur(this)">Violet</button>
+		<button class="noir" onclick="selectionCouleur(this)">Noir</button>
+		<button class="blanc" onclick="selectionCouleur(this)">Blanc</button>
+		<button id="ajout" onclick="ajouter(this)">+</button>
+	</section>
+
+	<section id="reglage">
+		<p>Zoom de la grille :</p>
+		<div id="zoom">
+			<button id="zoomPlus" onclick="zoom(this.id)">+</button>
+			<button id="zoomMoins" onclick="zoom(this.id)">-</button>
+		</div>
+		<p>Couleur séléctionnée :</p>
+		<div id="couleurSelect"></div>
+		<button id="reset" onclick="reset(this)">
+			<img src="asset/reset.svg" alt="reset">
+		</button>
+		</div>
+	</section>
+
+	<section id="grille">
+	</section>
+
+	<script src="./script.js" charset="utf-8"></script>
+</body>
+
+</html>

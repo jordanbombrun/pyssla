@@ -1,0 +1,21 @@
+$bleu: rgb(2, 111, 224);
+$vert: rgb(15, 157, 8);
+$jaune: rgb(214, 195, 22);
+$orange: rgb(209, 114, 16);
+$rose: rgb(232, 41, 190);
+$rouge: rgb(233, 14, 14);
+$violet: rgb(117, 33, 212);
+$noir: rgb(0, 0, 0);
+$blanc: rgb(255, 255, 255);
+
+
+
+.bleu { background-color: $bleu; color: $blanc;}
+.vert { background-color: $vert}
+.jaune { background-color: $jaune}
+.orange { background-color: $orange}
+.rose { background-color: $rose}
+.rouge { background-color: $rouge}
+.violet { background-color: $violet}
+.noir { background-color: $noir; color: $blanc;}
+.blanc { background-color: $blanc}

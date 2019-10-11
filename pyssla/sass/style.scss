@@ -1,0 +1,88 @@
+@import 'reset', 'couleurs';
+
+body {
+	padding: 20px;
+}
+section { margin: 20px 0;}
+h1 {
+	text-align: center;
+	margin: 10px;
+	font-family: 'sans-serif';
+}
+%sectionGrid {
+	display: grid;
+	grid-gap: 10px;
+}
+%bordure { border: 1px solid black; }
+%bordureArrondie {
+	font-size: 1.2em;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#grille {
+	@extend %sectionGrid;
+	padding: auto;
+	button {
+		@extend %bordure;
+		border-radius: 50%;
+	}
+}
+
+#couleurs {
+	@extend %sectionGrid;
+	grid-template-columns: repeat(6, 1fr);
+	button {
+		@extend %bordure;
+		height: 30px;
+		border-radius: 5px;
+		font-size: 1.1vw;
+	}
+}
+
+#reglage {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	#couleurSelect {
+		@extend %bordure;
+		border-radius: 5px;
+		width: 100px;
+		height: 30px;
+	}
+	#couleurSelect, p, button { margin: 0 10px 0 10px; }
+	#zoom {
+		border-right: 1px solid black;
+		button {
+			@extend %bordureArrondie;
+		}
+	}
+	#reset {
+		border: none;
+		img {
+			width: 50px;
+		}
+	}
+}
+
+#nouvelleCouleur {
+	display: none;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	button#validerCouleur {
+		@extend %bordureArrondie;
+	}
+	input[type=range] {
+		margin-left: 20px;
+	}
+	ul li {
+		margin: 10px 0 10px 0;
+		border-right: 1px solid black;
+		@extend %bordureArrondie;
+	}
+	#resultat {
+		@extend %bordureArrondie;
+	}
+}
